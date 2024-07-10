@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: transform 0.5s ease-out;
+}
+
+.button:hover {
+  transform: translateY(-5px);
+}
+
+.cab-animation {
+  position: relative;
+  overflow: hidden;
+  animation-name: cab;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cab {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.button:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.button:nth-child(2) {
+  animation-delay: 1.5s;
+}
